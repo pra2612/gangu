@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Voter Registration</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$("#submitBtn").click(function() {
+				// Get the form data
+				var name = $("#name").val();
+				var age = $("#age").val();
+				var nationality = $("#nationality").val();
+				
+				// Send the data to the server for validation
+				$.ajax({
+					url: "validate.php",
+					method: "POST",
+					data: {name: name, age: age, nationality: nationality},
+					success: function(response) {
+						if (response == "valid") {
+							// If the data is valid, submit the form
+							$("#registrationForm").submit();
+						} else {
+							// If the data is invalid, display an error message
+							$("#errorMsg").text(response);
+						}
+					}
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<h1>Voter Registration Form</h1>
+	<form id="registrationForm" action="submit.php" method="POST">
+		<p>
+			<label>Name:</label>
+			<input type="text" id="name" name="name" required>
+		</p>
+		<p>
+			<label>Age:</label>
+			<input type="number" id="age" name="age" required>
+		</p>
+		<p>
+			<label>Nationality:</label>
+			<input type="text" id="nationality" name="nationality" required>
+		</p>
+		<p>
+			<input type="button" id="submitBtn" value="Submit">
+		</p>
+	</form>
+	<p id="errorMsg"></p>
+</body>
+</html>

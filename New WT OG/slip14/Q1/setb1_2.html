@@ -1,0 +1,42 @@
+<html>
+    <head>
+    <script type="text/javascript">
+        function showTeacher(str)
+        {
+            if(str=="")
+            {
+                document.getElementById("txtHint").innerHTML="";
+                return;
+            }
+            if(window.XMLHttpRequest)
+            {
+                xmlhttp=new XMLHttpRequest();
+            }
+            xmlhttp.onreadystatechange=function()
+            {
+                if(xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                    document.getElementById("txtHint").innerHTML=xmlhttp.responseText;
+                }
+            }
+            xmlhttp.open("GET","setb1_2.php?n="+str,true);
+            xmlhttp.send();
+        }
+    </script>
+    </head>
+    <body>
+        <form>
+            <select name="users" onchange="showTeacher(this.value)">
+            <option value="">SELECT A TEACHER</option>
+            <option value="1">John Smith</option>
+            <option value="2">Mary Johnson</option>
+            <option value="3">David Lee</option>
+        </select>
+        </form>
+        <br />
+        <div>
+            <b>Teachers details is listed below,</b><br><br>
+            <b id="txtHint"></b>
+    </div>
+    </body>
+</html>

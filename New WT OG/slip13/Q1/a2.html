@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AJAX Program</title>
+	<script src="jquery.js"></script>
+</head>
+<body>
+	<label for="name">Enter your name: </label>
+	<input type="text" id="name" name="name"><br><br>
+	<div id="response"></div>
+</body>
+<script>
+$(document).ready(function(){
+	$("#name").on("input", function(){
+		var name = $(this).val();
+		if (name == '') {
+			$("#response").html("Stranger, please tell me your name!");
+		}
+		else if (name == "Rohit" || name == "Virat" || name == "Dhoni" || name == "Ashwin" || name == "Harbhajan") {
+			$("#response").html("Hello, master " + name + "!");
+		}
+		else {
+			$("#response").html(name + ", I don't know you!");
+		}
+	});
+});
+</script>
+</html>
+

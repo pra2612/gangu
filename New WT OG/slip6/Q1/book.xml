@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+
+<bookinfo>
+<Book bid="b001">
+
+<bname>java</bname>
+<author> abc </author>
+<publication>Vision</publication>
+<price>123</price>
+</Book>
+
+<Book bid="b002">
+
+<bname>PHP</bname>
+<author> pqr </author>
+<publication>Techmax</publication>
+<price>250</price>
+</Book>
+
+<Book bid="b001">
+
+<bname>OS</bname>
+<author> qqq </author>
+<publication>Nirali</publication>
+<price>127</price>
+</Book>
+</bookinfo>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<iteminfo>
+   <item id="101">
+     <iname>pen</iname>
+      <iprice>15.00</iprice>
+     <iqty>20</iqty>
+  </item>
+ <item id="102">
+     <iname>book</iname>
+      <iprice>38.00</iprice>
+     <iqty>12</iqty>
+  </item>
+ <item id="103">
+     <iname>pencil</iname>
+      <iprice>5.00</iprice>
+     <iqty>25</iqty>
+  </item>
+ <item id="104">
+     <iname>calculator</iname>
+      <iprice>175.00</iprice>
+     <iqty>5</iqty>
+  </item>
+ <item id="105">
+     <iname>Scale</iname>
+      <iprice>10.00</iprice>
+     <iqty>20</iqty>
+  </item>
+</iteminfo>

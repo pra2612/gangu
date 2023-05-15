@@ -1,0 +1,35 @@
+<html>
+<script type="text/javascript">
+function disp()
+{
+  var msg=document.getElementById("t1");
+   alert("hello "+msg.value+" exams are near you have to study");
+}
+function getConfirmation( )
+{
+ var retval=confirm("Do you want to continue?" );
+ if(retval==true)
+{
+alert("hello exams are near you have to study");
+
+}
+else
+{
+alert("hello exams are over");
+
+}
+}
+function prm( )
+{ 
+var fname=prompt("Hello!  Whats your name");
+alert("hello "+fname.value+" exams are near you have to study");
+}
+
+</script>
+<body>
+<input type=text id="t1"><br>
+<input type=submit onclick="disp()" value="alert">
+<input type=submit onclick="getConfirmation()" value="confirm">
+<input type=submit onclick="prm( )" value="prompt">
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> AJAX Suggestions Example </title>
+  <script src="jquery.js"></script>
+  <script>
+    $(document).ready(function() {
+      var suggestions = ["apple", "banana", "cherry", "date", "elderberry", "fig", "grape", "honeydew", "kiwi", "lemon"];
+      $("#myInput").on("keyup", function() {
+        var input = $(this).val().toLowerCase();
+        var matchingSuggestions = suggestions.filter(function(suggestion) {
+          return suggestion.toLowerCase().startsWith(input);
+        });
+        var suggestionHtml = "";
+        for (var i = 0; i < matchingSuggestions.length; i++) {
+          suggestionHtml += "<div>" + matchingSuggestions[i] + "</div>";
+        }
+        $("#suggestions").html(suggestionHtml);
+      });
+    });
+  </script>
+</head>
+<body>
+  <input type="text" id="myInput">
+  <div id="suggestions"></div>
+</body>
+</html>
+

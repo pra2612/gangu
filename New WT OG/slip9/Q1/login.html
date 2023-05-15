@@ -1,0 +1,25 @@
+<html>
+<head>
+<script type="text/javascript">
+
+function pasuser(form) {
+if (form.id.value=="ty") { 
+if (form.pass.value=="bcs") {              
+alert("welcome Login successful");
+} else {
+alert("Invalid Password")
+}
+} else {  alert("Invalid UserID")
+}
+}
+
+</script>
+</head>
+<body>
+<center>
+<form name="login">
+Login Area <br>
+UserID:<input name="id" type="text"><br><br>
+Password:<input name="pass"type="password"><br>
+<input type="button" value="Login"onClick="pasuser(this.form)">
+<input type="Reset"></form></center></body>

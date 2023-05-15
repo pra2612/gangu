@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<movieinfo>
+  <movie no="101">
+  <title>Sooryavanshi</title>
+  <actor>akshay kumar</actor>
+  <ryear>2021</ryear>
+  </movie>
+<movie no="102">
+  <title>Simba</title>
+  <actor>Ranbir Singh</actor>
+  <ryear>2020</ryear>
+  </movie>
+<movie no="103">
+  <title>Bahubali</title>
+  <actor>Prabhas</actor>
+  <ryear>2018</ryear>
+  </movie>
+<movie no="104">
+  <title>Radhe</title>
+  <actor>Salman Khan</actor>
+  <ryear>2020</ryear>
+  </movie>
+</movieinfo>
+   

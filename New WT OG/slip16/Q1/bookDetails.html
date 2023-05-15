@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Book Details</title>
+	<script src="jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#bookSelect').change(function(){
+				var selectedBook = $(this).val();
+				$.ajax({
+					type: "GET",
+					url: "books.xml",
+					dataType: "xml",
+					success: function(xml){
+						$(xml).find('book').each(function(){
+							var title = $(this).find('title').text();
+							if(title === selectedBook){
+								var author = $(this).find('author').text();
+								var year = $(this).find('year').text();
+								var price = $(this).find('price').text();
+								var details = "Author: " + author + "<br>Year: " + year + "<br>Price: $" + price;
+								$('#bookDetails').html(details);
+							}
+						});
+					}
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<h1>Book Details</h1>
+	<select id="bookSelect">
+		<option value="">--Select a Book--</option>
+		<option value="Harry Potter and the Philosopher's Stone">Harry Potter and the Philosopher's Stone</option>
+		<option value="The Hobbit">The Hobbit</option>
+		<option value="To Kill a Mockingbird">To Kill a Mockingbird</option>
+	</select>
+	<div id="bookDetails"></div>
+</body>
+</html>
+
